@@ -1,0 +1,15 @@
+SELECT count(Director_1) , Director_1, count(Genre) ,Genre
+FROM `vocal-camera-430216-u3.movie_data.movies` 
+Where `Budget ` >= 10000000 and `Budget ` <= Revenue
+group by Director_1 ,Genre
+order by count(Director_1) DESC;
+
+SELECT `Movie Title` , `Release Date`, (Revenue - `Budget `) as `lossprofit` 
+FROM `vocal-camera-430216-u3.movie_data.movies` 
+Where (Revenue - `Budget `) > 10000
+ORDER BY (Revenue - `Budget `) DESC
+
+
+
+
+
